@@ -12,10 +12,18 @@
 	$end=$_POST['end'];
 	$addequipment=$_POST['addequipment'];
 	$remark = $_POST['remark'];
+	$file=$_FILES['meetfile'];
+	$filename=$_FILES["meetfile"]["name"];
+	$filTmpename=$_FILES["meetfile"]["tmp_name"];
+	$fileExt=explode(".",$filename);
+	$fileAcExt = strtolower(end($fileExt));
+	$newFilename=time() . "." .$fileAcExt;
+	$fileDes='upload/'.$newFilename;
 
+	move_uploaded_file($filTmpename,$fileDes);
+	$meetfilelocation=$fileDes;
 
-	
-	$sql = "INSERT INTO meeting(title,head,numattend,listname,roomid,start,end,addequipment,remark) VALUES ('$title','$head',$numattend,'$listname',$roomid,'$start','$end','$addequipment','$remark')";
+	$sql = "INSERT INTO meeting(title,head,numattend,listname,roomid,start,end,addequipment,remark,meetfile) VALUES ('$title','$head',$numattend,'$listname',$roomid,'$start','$end','$addequipment','$remark','$meetfilelocation')";
 	mysqli_query($conn,$sql);
 	header('location:addmeet.php');
 

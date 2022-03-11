@@ -16,7 +16,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="container-fluid">
-					<form method="POST" action="addmeet_model.php">
+					<form method="POST" action="addmeet_model.php" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-lg-3">
 								<label class="control-label" style="position:relative; top:7px;">วาระประชุม:</label>
@@ -114,7 +114,7 @@
 						<div style="height:10px;"></div>
 						<div class="row">
 							<div class="col-lg-3">
-								<label class="control-label" style="position:relative; top:7px;">ไฟล์:</label>
+								<label class="control-label" style="position:relative; top:7px;">แนบไฟล์ประชุม:</label>
 							</div>
 							<div class="col-lg-9">
 								<input type="file" class="form-control" name="meetfile">
