@@ -25,15 +25,20 @@
 	<span style="font-size:25px; color:blue"><center><strong>เพิ่มการประชุม</strong></center></span>	
 		<span class="pull-left"><a href="#addnew" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add New</a></span>
 		<div style="height:50px;"></div>
-		<table class="table table-striped table-bordered table-hover">
-			<thead>
+		<table class="table table-striped table-bordered table-hover text-center">
+			<thead class="">
 				<th>รหัสการจอง</th>
 				<th>วาระประชุม</th>
 				<th>ประธานการประชุม</th>
                 <th>จำนวนผู้เข้าประชุม</th>
+				<th>ผู้เข้าประชุม</th>
 				<th>ห้องประชุม</th>
                 <th>วันเวลาเริ่มประชุม</th>
 				<th>วันเวลาสิ้นสุดการประชุม</th>
+				<th>อุปกรณ์เพิ่มเติม</th>
+				<th>หมายเหตุ</th>
+				<th>ไฟล์วาระประชุม</th>
+				<th>ผู้จองประชุม</th>
 				<th>จัดการ</th>
 			</thead>
 			<tbody>
@@ -43,15 +48,18 @@
 				$query=mysqli_query($conn,"select * from events");
 				while($row=mysqli_fetch_array($query)){
 					?>
-					<tr>
+					<tr >
 						<td><?php echo $row['id']; ?></td>
 						<td><?php echo $row['title']; ?></td>
 						<td><?php echo $row['head']; ?></td>
                         <td><?php echo $row['numattend']; ?></td>
+						<td><?php echo $row['listname']; ?></td>
                         <td><?php echo $row['roomid']; ?></td>
                         <td><?php echo $row['start']; ?></td>
 						<td><?php echo $row['end']; ?></td>
-						<td><a href="<?php echo $row['meetfile']; ?>">ดูไฟล์</a></td>
+						<td><?php echo $row['addequipment']; ?></td>
+						<td><?php echo $row['remark']; ?></td>
+						<td><a href="<?php echo $row['meetfile'];?>">ดูไฟล์</a></td>
 						<td>
 							<a href="#edit<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit</a> || 
 							<a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>

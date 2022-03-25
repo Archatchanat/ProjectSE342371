@@ -34,23 +34,37 @@ session_start();
 
 
       <li class="nav-item ">
-        <a class="nav-link href="#" >
-         เพื่มห้องประชุม
+        <a class="nav-link" href="#" >
+         ปฏิทินการประชุม
         </a>
- 
       </li>
-
+      <li class="nav-item ">
+        <a class="nav-link" href="#" >
+         ตรวจสถานะประธาน
+        </a>
+      </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         จองห้องห้องประชุม
+         ห้องประชุม
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">ค้นหาห้องประชุม</a>
+		  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">จองห้องประชุม</a>
-		  <a class="dropdown-item" href="#">แก้ไขห้องประชุม</a>
+          <a class="dropdown-item" href="#">แก้ไขจองห้องประชุม</a>
+          <a class="dropdown-item" href="#">ยกเลิกจองห้องประชุม</a>
         </div>
  
+      </li>
+
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        ค้าหาข้อมูล
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">ค้าหาชื่อประธาน</a>
+          <a class="dropdown-item" href="#">ค้นหาชื่อวาระการประชุม</a>
+        </div>
+      </li>
 
     </ul>
 

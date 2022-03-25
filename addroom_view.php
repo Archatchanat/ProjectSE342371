@@ -11,6 +11,14 @@
                 <div class="modal-body">
 				<div class="container-fluid">
 				<form method="POST" action="addroom_model.php">
+				<div class="row">
+						<div class="col-lg-2">
+							<label class="control-label" style="position:relative; top:7px;">รหัสห้อง:</label>
+						</div>
+						<div class="col-lg-10">
+							<input type="text" class="form-control" name="roomid">
+						</div>
+					</div>
 					<div class="row">
 						<div class="col-lg-2">
 							<label class="control-label" style="position:relative; top:7px;">ชื่อห้อง:</label>
@@ -31,7 +39,7 @@
 					<div style="height:10px;"></div>
 					<div class="row">
 						<div class="col-lg-2">
-							<label class="control-label" style="position:relative; top:7px;">ความจุ:</label>
+							<label class="control-label" style="position:relative; top:7px;">ความจุห้อง:</label>
 						</div>
 						<div class="col-lg-10">
 							<input type="text" class="form-control" name="capacity">
@@ -61,10 +69,10 @@
 							<label class="control-label" style="position:relative; top:7px;">อื่นๆ:</label>
 						</div>
 						<div class="col-lg-10">
-							<input type="text" class="form-control" name="other">
+							<input type="text" class="form-control" name="others">
 						</div>
 					</div>
-					<div style="height:10px;"></div>
+
                 </div> 
 				</div>
                 <div class="modal-footer">

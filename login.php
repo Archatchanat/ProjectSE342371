@@ -20,7 +20,7 @@ session_start();
       <div class="container">
   <!-- Just an image -->
 
-  <a class="navbar-brand" href="index.php">
+  <a class="navbar-brand" href="#">
     <img src="img/logo.png" width="30" height="30" alt="">
   </a>
 
@@ -110,8 +110,7 @@ if(isset($_POST['login']))
 		{	
 		   $_SESSION['user'] = $username;
            echo "<script>window.open('adminpage.php','_self')</script>";
-		}else 
-		{
+		}else{
 			$_SESSION['user'] = $username;
            echo "<script>window.open('userpage.php','_self')</script>";
 		}

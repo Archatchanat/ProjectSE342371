@@ -1,6 +1,6 @@
 <!-- Delete -->
-<div class="modal fade" id="del<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="del<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -27,7 +27,7 @@
 
 <!-- Edit -->
     <div class="modal fade modal-xl" id="edit<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -54,7 +54,14 @@
 							<label class="control-label" style="position:relative; top:7px;">ประธานการประชุม:</label>
 						</div>
 						<div class="col-lg-10">
-							<input type="text" name="head" class="form-control" value="<?php echo $erow['head']; ?>">
+						<select class="form-control" id="head" name="head">
+   							<option><?php echo $erow['head']; ?></option>
+							<option>รองนายกเทศมนตรี</option>
+    						<option>รองนายกเทศมนตรี1</option>
+  							<option>รองนายกเทศมนตรี2</option>
+   							<option>รองนายกเทศมนตรี3</option>
+  							</select>
+							<!-- <input type="text" name="head" class="form-control" value="<?php echo $erow['head']; ?>"> -->
 						</div>
 					</div>
                     <div style="height:10px;"></div>
@@ -89,7 +96,6 @@
 							<option value="<?php echo $row['roomid'];?>"><?php echo $row['roomname']; ?></option>
 							<?php } ?>
 							</select>
-							<!-- <input type="text" name="roomid" class="form-control" value="<?php echo $erow['roomid']; ?>"> -->
 						</div>
 					</div>
                     <div style="height:10px;"></div>

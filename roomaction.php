@@ -42,7 +42,7 @@
 				<form method="POST" action="editroom.php?roomid=<?php echo $erow['roomid']; ?>">
 					<div class="row">
 						<div class="col-lg-2">
-							<label style="position:relative; top:7px;">ชื่อห้อง:</label>
+							<label style="position:relative; top:7px;">ชื่อห้องประชุม:</label>
 						</div>
 						<div class="col-lg-10">
 							<input type="text" name="roomname" class="form-control" value="<?php echo $erow['roomname']; ?>">
@@ -57,26 +57,23 @@
 							<input type="text" name="location" class="form-control" value="<?php echo $erow['location']; ?>">
 						</div>
 					</div>
-                    <div style="height:10px;"></div>
-					<div class="row">
+                    <div class="row">
 						<div class="col-lg-2">
-							<label style="position:relative; top:7px;">ความจุ:</label>
+							<label style="position:relative; top:7px;">ความจุห้อง:</label>
 						</div>
 						<div class="col-lg-10">
 							<input type="text" name="capacity" class="form-control" value="<?php echo $erow['capacity']; ?>">
 						</div>
 					</div>
-                    <div style="height:10px;"></div>
-					<div class="row">
+                    <div class="row">
 						<div class="col-lg-2">
-							<label style="position:relative; top:7px;">โปรเจคเตอร์:</label>
+							<label style="position:relative; top:7px;">จำนวนโปรเจคเตอร์:</label>
 						</div>
 						<div class="col-lg-10">
 							<input type="text" name="projector" class="form-control" value="<?php echo $erow['projector']; ?>">
 						</div>
 					</div>
-                    <div style="height:10px;"></div>
-					<div class="row">
+                    <div class="row">
 						<div class="col-lg-2">
 							<label style="position:relative; top:7px;">จำนวนไมค์:</label>
 						</div>
@@ -84,13 +81,12 @@
 							<input type="text" name="microphone" class="form-control" value="<?php echo $erow['microphone']; ?>">
 						</div>
 					</div>
-                    <div style="height:10px;"></div>
-					<div class="row">
+                    <div class="row">
 						<div class="col-lg-2">
 							<label style="position:relative; top:7px;">อื่นๆ:</label>
 						</div>
 						<div class="col-lg-10">
-							<input type="text" name="others" class="form-control" value="<?php echo $erow['others']; ?>">
+							<input type="text" name="other" class="form-control" value="<?php echo $erow['other']; ?>">
 						</div>
 					</div>
 
